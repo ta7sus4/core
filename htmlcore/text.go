@@ -31,7 +31,7 @@ func extractText(ctx *Context, n *html.Node) string {
 	}
 	it := isText(n)
 	if !it {
-		readHTMLNode(ctx, ctx.Parent(), n)
+		ReadHTMLNode(ctx, ctx.Parent(), n)
 	}
 	if it && n.FirstChild != nil {
 		start, end := nodeString(n)
